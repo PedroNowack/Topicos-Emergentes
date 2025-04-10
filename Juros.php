@@ -28,12 +28,12 @@
             $juros = floatval($_POST['juros']) / 100;
             $parcelas = intval($_POST['parcelas']);
 
-            // Cálculo da parcela usando a fórmula de juros compostos
+    
             $montanteTotal = $divida * pow(1 + $juros, $parcelas);
             $valorParcela = $montanteTotal / $parcelas;
             $mediaParcelas = $valorParcela; // A média das parcelas é igual ao valor da parcela
 
-            // Exibir resultados
+            
             echo "<div id='resultado' class='resultado'>";
             echo "<h2>Resultados</h2>";
             echo "<p>Valor de cada parcela: R$ " . number_format($valorParcela, 2, ',', '.') . "</p>";
