@@ -1,29 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula de Tópicos 3/04</title>
+    <title>Página Interativa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .change-text {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+        .color-button {
+            background-color: #008CBA; /* Azul */
+            color: white;
+        }
+        .color-button:hover {
+            background-color: #005f73; /* Azul escuro */
+        }
+        .welcome-button {
+            background-color: #f44336; /* Vermelho */
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
+    <h1 id="main-text">Bem-vindo à minha página! 🌟</h1>
     
-<form method="post" action="formulario.php">
-    Digite o seu nome:
-    <input type="text" size="80" name="txtnome">
-    <br>
-    Digite sua idade:
-    <input type="text" size="80" name="txtidade">
-    <br>
-    Digite seu gênero:
-    <input type="radio" size="80" name="txtgen" value ="Masculino">Masculino
-    <input type="radio" size="80" name="txtgen" value ="Feminino">Feminino <br>
-    <br>
-    Digite seu endereço:
-    <input type="text " size="80" name="txtendereco">
-    <br><br><br>
-    <input type="submit" value="Enviar" name="Enviar">
-    
-</form>
+    <button class="change-text" onclick="changeText()">Mudar Texto</button>
+    <button class="color-button" onclick="changeBackgroundColor('lightblue')">Cor Azul</button>
+    <button class="color-button" onclick="changeBackgroundColor('lightgreen')">Cor Verde</button>
+    <button class="color-button" onclick="changeBackgroundColor('lightcoral')">Cor Vermelha</button>
+    <button class="welcome-button" onclick="showWelcome()">Dizer Olá! 👋</button>
+
+    <script>
+        function changeText() {
+            const mainText = document.getElementById('main-text');
+            mainText.textContent = mainText.textContent === 'Bem-vindo à minha página! 🌟' 
+                ? 'Você mudou o texto! 🎉' 
+                : 'Bem-vindo à minha página! 🌟';
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function showWelcome() {
+            alert('Bem-vindo à minha página interativa! 🎈');
+        }
+    </script>
 
 </body>
 </html>
