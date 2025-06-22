@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Madruga - Portfólio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+        }
+        .hero {
+            background: linear-gradient(135deg, #8a9ec9 0%, #26235e 100%);
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #a1afcc;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .profile-img:hover {
+            transform: rotate(5deg) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .quote {
+            font-style: italic;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.7);
+            border-left: 3px solid #1d2c4d;
+            transition: all 0.3s ease;
+        }
+        .quote:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.9);
+        }
+        .section-title {
+            color: #1d2c4d;
+            border-bottom: 2px solid #b2cde4;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        footer {
+            background: #1d2c4d;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .job-card {
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+            border-left: 4px solid #1d2c4d;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .job-title {
+            color: solid #1d2c4d;
+            font-weight: bold;
+        }
+        .tag {
+            background-color: #b2cde4;
+            color: #172136;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <section class="hero is-medium">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <img src="madruguinha.jpg" alt="Seu Madruga" 
+                     class="profile-img animate__animated animate__fadeIn floating">
+                <h1 class="title is-2 animate__animated animate__fadeIn" style="color: #100e0e;">Seu Madruga</h1>
+                <h2 class="subtitle animate__animated animate__fadeIn" style="color: #100e0e;">Especialista em viver sem trabalhar</h2>
+                <div class="quote animate__animated animate__fadeIn">
+                    "Trabalhar? Não! O trabalho é um sacrifício que só traz cansaço e desgosto."
+                </div>
+                <a href="#profissoes" class="button is-link animate__animated animate__pulse" 
+                   style="background-color: #1d2c4d">
+                    Minhas "Profissões"
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profissões -->
+    <section class="section" id="profissoes">
+        <div class="container">
+            <h2 class="title is-3 section-title animate__animated animate__fadeIn">Minhas Tentativas de Trabalho</h2>
+            
+            <div class="box job-card animate__animated animate__fadeInLeft">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="job-title">Vendedor Ambulante</p>
+                            <div class="tags">
+                                <span class="tag">Fracasso</span>
+                                <span class="tag">1980</span>
+                            </div>
+                            <p>Tentei vender balões e pipocas, mas acabei comendo toda a mercadoria. Resultado: prejuízo e dor de barriga.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="box job-card animate__animated animate__fadeInLeft" style="animation-delay: 0.1s">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="job-title">Faz-tudo da Vila</p>
+                            <div class="tags">
+                                <span class="tag">Temporário</span>
+                                <span class="tag">1975</span>
+                            </div>
+                            <p>Consertava coisas na vila em troca de comida. Até que quebrei mais do que consertei e fui "demitido".</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="box job-card animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="job-title">Ator de Novelas</p>
+                            <div class="tags">
+                                <span class="tag">Sucesso Relativo</span>
+                                <span class="tag">1971-1981</span>
+                            </div>
+                            <p>Minha única experiência profissional bem-sucedida foi interpretar a mim mesmo na TV. Mas isso não conta como trabalho, era diversão!</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="box job-card animate__animated animate__fadeInLeft" style="animation-delay: 0.3s">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="job-title">Fiscal de Obras</p>
+                            <div class="tags">
+                                <span class="tag">Desastre</span>
+                                <span class="tag">1978</span>
+                            </div>
+                            <p>Durou um dia. No primeiro serviço que fiscalizei, o muro caiu em cima de mim. Decidi que fiscalização não era para mim.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações Gerais -->
+    <section class="section" id="informacoes-gerais">
+        <div class="container">
+            <h2 class="title is-3 section-title animate__animated animate__fadeIn">Informações Gerais</h2>
+            <div class="content animate__animated animate__fadeIn">
+                <div class="box">
+                    <h3 class="title is-4">Quem Sou</h3>
+                    <p>Sou Seu Madruga, um personagem icônico da Vila do Chaves, conhecido por minha habilidade em evitar o trabalho e por minha sabedoria peculiar sobre a vida.</p>
+                    <p> Nome: Ramon Valdés.</p>
+                    <p> Nacionalidade: México.</p>
+                    <p> Data de nascimento: 02/09/1924 </p>
+                    <p> Ocupação: Desempregado</p>
+                </div>
+                <div class="box">
+                    <h3 class="title is-4">Interesses</h3>
+                    <p>Tenho um grande apreço por literatura e cinema, especialmente por histórias que fazem rir e refletir. Acredito que a vida deve ser vivida com leveza e diversão.</p>
+                </div>
+                <div class="box">
+                    <h3 class="title is-4">Curiosidades</h3>
+                    <ul>
+                        <li>Nasci na décda de 1920, mas minha alma é eterna!</li>
+                        <li>Já tive várias "profissões", mas nenhuma delas me prendeu por muito tempo.</li>
+                        <li>Sou pai da Chiquinha e sempre estou fugindo do Senhor Barriga.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-3 section-title animate__animated animate__fadeIn">Minha Filosofia</h2>
+            <div class="content animate__animated animate__fadeIn">
+                <div class="quote">
+                    "Não há trabalho ruim, o ruim é ter que trabalhar!"
+                </div>
+                <p>Após tantas tentativas frustradas, cheguei à conclusão que minha verdadeira vocação é:</p>
+                <ul>
+                    <li>✔ Viver sem trabalhar</li>
+                    <li>✔ Dar aulas de vida para o Chaves</li>
+                    <li>✔ Fugir do Senhor Barriga</li>
+                    <li>✔ Ser pai da Chiquinha</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="animate__animated animate__fadeIn">
+        <p>© 2023 Seu Madruga - "Trabalhar? Não, obrigado!"</p>
+    </footer>
+
+    <script>
+        // Animação ao rolar a página
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeInUp');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate__animated').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
